@@ -1,23 +1,20 @@
 package Homeworks.Lesson2;
 
-import Homeworks.Lesson1.Rectangle;
-
 import java.util.Scanner;
 
 import static java.lang.Double.parseDouble;
 
 public class Program {
     public static void main(String[] args) {
+        MathFunctions func = new MathFunctions();
         Scanner params = new Scanner(System.in);
-        System.out.println("Введите длину: ");
-        double length = parseDouble(params.nextLine());
-        System.out.println("Введите ширину: ");
-        double width = parseDouble(params.nextLine());
-        //Rectangle r1 = new Rectangle(4, 5);
-        //Rectangle r2 = new Rectangle(5, 8);
-        //r1.displayProperties();
-        //r2.displayProperties();
-        Rectangle r = new Rectangle(length, width);
-        r.displayProperties();
+        System.out.println("Введите число: ");
+        double num = parseDouble(params.nextLine());
+        System.out.println("Введите степень: ");
+        int pow = (Integer.parseInt(params.nextLine()));
+
+        System.out.println("Число в степени: " + func.Power(num,pow));
+        System.out.println("Модуль комплексного числа z=-5+15i равно " + func.AbsComplex(-5,15));
+        System.out.println("Длина окружности с радиусом 5.15 равно " + func.CirclePerimeter(5.15));
     }
 }
