@@ -34,6 +34,7 @@ public class ToDoList {
     }
     public void edit(int index, String text) {
         tasks.set(index,text);
+        System.out.println("Задача обновлена");
     }
 
     public void delete(int index) {
